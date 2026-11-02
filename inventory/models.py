@@ -1,5 +1,6 @@
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.utils import timezone
 
 
 class Inventory(models.Model):
@@ -110,3 +111,9 @@ class Inventory(models.Model):
     class Meta:
         verbose_name = "Inventory"
         verbose_name_plural = "Inventories"
+
+    @property
+    def is_expired(self):
+        if self.expires_on:
+            return self.expires_on < timezone.localdate()
+        return False
