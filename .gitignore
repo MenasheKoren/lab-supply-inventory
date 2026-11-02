@@ -40,6 +40,7 @@ htmlcov/
 .idea/shelf/
 .idea/dictionaries/
 .idea/dataSources/
+.idea/dataSources.xml
 .idea/dataSources.local.xml
 .idea/httpRequests/
 
