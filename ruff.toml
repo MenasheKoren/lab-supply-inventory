@@ -1,0 +1,2 @@
+# Generated code: don't lint or format Django migrations.
+extend-exclude = ["**/migrations/*.py"]
